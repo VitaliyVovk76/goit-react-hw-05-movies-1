@@ -1,29 +1,27 @@
 import { NavLink } from "react-router-dom";
 import styles from "./Navigation.module.css";
 
-function Navigation({ namesAndPathes }) {
-  const { pathToHome, pathToMovies, nameOfHome, nameOfMovies } = namesAndPathes;
-
+function Navigation() {
   return (
     <nav className={styles.navigation}>
       <ul className={styles.navigationList}>
         <li className={styles.navigationItem}>
           <NavLink
             exact
-            to={pathToHome}
+            to="/"
             className={styles.navigationLink}
             activeClassName={styles.activeLink}
           >
-            {nameOfHome}
+            Home
           </NavLink>
         </li>
         <li className={styles.navigationItem}>
           <NavLink
-            to={pathToMovies}
+            to="/movies"
             className={styles.navigationLink}
             activeClassName={styles.activeLink}
           >
-            {nameOfMovies}
+            Movies
           </NavLink>
         </li>
       </ul>

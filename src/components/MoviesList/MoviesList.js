@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import PropTypes from "prop-types";
 import { IMAGE_URL } from "../../services/moviesshelf-api";
 import s from "./MoviesList.module.css";
 
@@ -31,5 +32,12 @@ function MoviesList({ movies, url, location, btnName }) {
     </>
   );
 }
+
+MoviesList.propTypes = {
+  movies: PropTypes.array.isRequired,
+  url: PropTypes.string.isRequired,
+  btnName: PropTypes.string.isRequired,
+  location: PropTypes.object.isRequired,
+};
 
 export default MoviesList;

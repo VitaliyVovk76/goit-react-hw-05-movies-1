@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import PropTypes from "prop-types";
 import { fetchMovieActors, IMAGE_URL } from "../../services/moviesshelf-api";
 
 function CastsList({ movieId }) {
@@ -27,5 +28,7 @@ function CastsList({ movieId }) {
     </>
   );
 }
+
+CastsList.propTypes = { movieId: PropTypes.string.isRequired };
 
 export default CastsList;

@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import PropTypes from "prop-types";
 import { fetchMovieReviews } from "../../services/moviesshelf-api";
 
 function ReviewsList({ movieId }) {
@@ -21,5 +22,7 @@ function ReviewsList({ movieId }) {
   }
   return <h3>There are no reviews yet</h3>;
 }
+
+ReviewsList.propTypes = { movieId: PropTypes.string.isRequired };
 
 export default ReviewsList;

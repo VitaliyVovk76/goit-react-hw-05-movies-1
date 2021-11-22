@@ -1,3 +1,5 @@
+import PropTypes from "prop-types";
+
 function MovieСard({ movie, imgUrl }) {
   const reliseDate = movie.release_date.split("-")[0];
   const voteAverage = movie.vote_average * 10;
@@ -19,5 +21,10 @@ function MovieСard({ movie, imgUrl }) {
     </div>
   );
 }
+
+MovieСard.propTypes = {
+  movie: PropTypes.object.isRequired,
+  imgUrl: PropTypes.string.isRequired,
+};
 
 export default MovieСard;
