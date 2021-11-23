@@ -45,6 +45,7 @@
   display: inline-block;
   width: 100%;
   border: none;
+  outline: none;
   font: inherit;
   font-size: 20px;
   padding-left: 5px;
