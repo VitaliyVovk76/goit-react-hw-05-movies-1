@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import PropTypes from "prop-types";
 import { fetchMovieActors, IMAGE_URL } from "../../services/moviesshelf-api";
+import s from "./CastsList.module.css";
 
 function CastsList({ movieId }) {
   const [actors, setActors] = useState(null);
@@ -12,9 +13,9 @@ function CastsList({ movieId }) {
   return (
     <>
       {actors && (
-        <ul>
+        <ul className={s.list}>
           {actors.map((actor) => (
-            <li key={actor.id}>
+            <li className={s.item} key={actor.id}>
               <img
                 src={actor.profile_path && `${IMAGE_URL}${actor.profile_path}`}
                 alt={actor.name}

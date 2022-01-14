@@ -30,13 +30,14 @@ function MovieDetailsPage() {
   const { path, url } = useRouteMatch();
   const [movie, setMovie] = useState(null);
   const location = useLocation();
+  console.log("location: ", location);
   const history = useHistory();
   useEffect(() => {
     fetchMoviesFullImfo(movieId).then(setMovie);
   }, [movieId]);
 
   const onGoBack = () => {
-    history.push(location?.state?.from?.location ?? "/books");
+    history.push(location?.state?.from?.location ?? "/");
   };
 
   return (
